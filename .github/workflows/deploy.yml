@@ -11,11 +11,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        working-directory: cv-react
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -33,5 +28,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: cv-react/dist 
+          folder: dist
           branch: gh-pages
