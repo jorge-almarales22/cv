@@ -16,8 +16,8 @@ function App() {
       <ThemeToggle />
       <main className="mx-auto relative z-0">
         <Hero />
-        <Experience />
         <Projects />
+        <Experience />
         <div id="skills">
           <Skills />
         </div>

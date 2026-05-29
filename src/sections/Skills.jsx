@@ -1,80 +1,104 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
+  SiJavascript,
+  SiPhp,
+  SiGo,
   SiPython,
+  SiSharp,
+  SiReact,
+  SiLaravel,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiAngular,
+  SiDjango,
   SiPostgresql,
-  SiR,
+  SiGraphql,
+  SiMysql,
+  SiMongodb,
+  SiSqlite,
   SiLooker,
-  SiPandas,
-  SiNumpy,
-  SiScikitlearn,
-  SiJupyter,
-  SiGit,
+  SiQlik,
 } from 'react-icons/si';
-import { FaChartBar, FaFileExcel, FaChartPie, FaCode } from 'react-icons/fa';
-import { FiBarChart2, FiTrendingUp } from 'react-icons/fi';
+import { FaChartBar, FaFileExcel, FaChartPie, FaDatabase } from 'react-icons/fa';
+import { FiBarChart2 } from 'react-icons/fi';
 
 const iconMap = {
+  JavaScript: <SiJavascript className="w-[15px] h-[15px]" style={{ color: '#F7DF1E' }} />,
+  PHP: <SiPhp className="w-[15px] h-[15px]" style={{ color: '#777BB4' }} />,
+  Go: <SiGo className="w-[15px] h-[15px]" style={{ color: '#00ADD8' }} />,
   Python: <SiPython className="w-[15px] h-[15px]" style={{ color: '#3776AB' }} />,
-  SQL: <SiPostgresql className="w-[15px] h-[15px]" style={{ color: '#336791' }} />,
-  R: <SiR className="w-[15px] h-[15px]" style={{ color: '#276DC3' }} />,
   VBA: <span className="text-[11px] font-bold text-blue-600">VBA</span>,
+  'C#': <SiSharp className="w-[15px] h-[15px]" style={{ color: '#239120' }} />,
   'Power BI': <FaChartBar className="w-[15px] h-[15px]" style={{ color: '#F2C811' }} />,
   Excel: <FaFileExcel className="w-[15px] h-[15px]" style={{ color: '#217346' }} />,
-  Tableau: <FaChartPie className="w-[15px] h-[15px]" style={{ color: '#E97627' }} />,
+  'Report Builder': <FaChartPie className="w-[15px] h-[15px]" style={{ color: '#8A2BE2' }} />,
+  Tableau: <FiBarChart2 className="w-[15px] h-[15px]" style={{ color: '#E97627' }} />,
   'Looker Studio': <SiLooker className="w-[15px] h-[15px]" style={{ color: '#4285F4' }} />,
-  Pandas: <SiPandas className="w-[15px] h-[15px]" style={{ color: '#150458' }} />,
-  NumPy: <SiNumpy className="w-[15px] h-[15px]" style={{ color: '#013243' }} />,
-  'Scikit-learn': <SiScikitlearn className="w-[15px] h-[15px]" style={{ color: '#F7931E' }} />,
-  Matplotlib: <FiBarChart2 className="w-[15px] h-[15px]" style={{ color: '#11557C' }} />,
-  Jupyter: <SiJupyter className="w-[15px] h-[15px]" style={{ color: '#F37626' }} />,
-  Git: <SiGit className="w-[15px] h-[15px]" style={{ color: '#F05032' }} />,
-  'VS Code': <FaCode className="w-[15px] h-[15px]" style={{ color: '#007ACC' }} />,
-  Stata: <FiTrendingUp className="w-[15px] h-[15px]" style={{ color: '#1A476F' }} />,
+  Qlik: <SiQlik className="w-[15px] h-[15px]" style={{ color: '#009845' }} />,
+  React: <SiReact className="w-[15px] h-[15px]" style={{ color: '#61DAFB' }} />,
+  Laravel: <SiLaravel className="w-[15px] h-[15px]" style={{ color: '#FF2D20' }} />,
+  Vue: <SiVuedotjs className="w-[15px] h-[15px]" style={{ color: '#4FC08D' }} />,
+  'Next.js': <SiNextdotjs className="w-[15px] h-[15px]" style={{ color: '#000000' }} />,
+  Angular: <SiAngular className="w-[15px] h-[15px]" style={{ color: '#DD0031' }} />,
+  Django: <SiDjango className="w-[15px] h-[15px]" style={{ color: '#092E20' }} />,
+  PostgreSQL: <SiPostgresql className="w-[15px] h-[15px]" style={{ color: '#4169E1' }} />,
+  GraphQL: <SiGraphql className="w-[15px] h-[15px]" style={{ color: '#E10098' }} />,
+  MySQL: <SiMysql className="w-[15px] h-[15px]" style={{ color: '#4479A1' }} />,
+  'SQL Server': <FaDatabase className="w-[15px] h-[15px]" style={{ color: '#CC2927' }} />,
+  MongoDB: <SiMongodb className="w-[15px] h-[15px]" style={{ color: '#47A248' }} />,
+  SQLite: <SiSqlite className="w-[15px] h-[15px]" style={{ color: '#003B57' }} />,
 };
 
 const skillGroups = [
   {
     category: 'Lenguajes',
     skills: [
-      { name: 'Python', stars: 3 },
-      { name: 'SQL', stars: 3 },
-      { name: 'R', stars: 2 },
-      { name: 'VBA', stars: 2 },
+      { name: 'JavaScript', stars: 5 },
+      { name: 'PHP', stars: 5 },
+      { name: 'Go', stars: 4 },
+      { name: 'Python', stars: 4 },
+      { name: 'VBA', stars: 4 },
+      { name: 'C#', stars: 2 },
     ],
   },
   {
     category: 'BI & Visualización',
     skills: [
-      { name: 'Power BI', stars: 3 },
-      { name: 'Excel', stars: 3 },
-      { name: 'Tableau', stars: 2 },
-      { name: 'Looker Studio', stars: 1 },
+      { name: 'Power BI', stars: 5 },
+      { name: 'Excel', stars: 5 },
+      { name: 'Report Builder', stars: 5 },
+      { name: 'Tableau', stars: 3 },
+      { name: 'Looker Studio', stars: 3 },
+      { name: 'Qlik', stars: 2 },
     ],
   },
   {
-    category: 'Librerías & ML',
+    category: 'Frameworks',
     skills: [
-      { name: 'Pandas', stars: 3 },
-      { name: 'NumPy', stars: 2 },
-      { name: 'Scikit-learn', stars: 2 },
-      { name: 'Matplotlib', stars: 2 },
+      { name: 'React', stars: 5 },
+      { name: 'Laravel', stars: 5 },
+      { name: 'Vue', stars: 5 },
+      { name: 'Next.js', stars: 5 },
+      { name: 'Angular', stars: 4 },
+      { name: 'Django', stars: 4 },
     ],
   },
   {
-    category: 'Herramientas',
+    category: 'Bases de Datos',
     skills: [
-      { name: 'Jupyter', stars: 3 },
-      { name: 'Git', stars: 2 },
-      { name: 'VS Code', stars: 3 },
-      { name: 'Stata', stars: 1 },
+      { name: 'PostgreSQL', stars: 5 },
+      { name: 'MySQL', stars: 5 },
+      { name: 'SQL Server', stars: 5 },
+      { name: 'MongoDB', stars: 5 },
+      { name: 'SQLite', stars: 5 },
+      { name: 'GraphQL', stars: 3 },
     ],
   },
 ];
 
 const Stars = ({ count }) => (
   <div className="flex gap-[3px]">
-    {[1, 2, 3].map(i => (
+    {[1, 2, 3, 4, 5].map(i => (
       <span
         key={i}
         className="block w-[7px] h-[7px] rounded-full bg-blue-400"

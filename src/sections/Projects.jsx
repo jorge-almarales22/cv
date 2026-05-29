@@ -1,16 +1,48 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Timeline from '../components/Timeline';
 
-const projects = [
+const experiences = [
   {
-    title: "Cerrejón",
-    desc: "Es una de las operaciones mineras de carbón a cielo abierto más grandes del mundo, ubicada en La Guajira, Colombia. Integra un complejo industrial que abarca la extracción en mina, una línea férrea de 150 km y Puerto Bolívar, una terminal marítima de alta eficiencia. La compañía exporta millones de toneladas anuales y es un pilar estratégico en la economía, infraestructura y desarrollo logístico del país.",
-    tech: ["Guajira", "Colombia"],
+    role: "Desarrollador Full Stack",
+    company: "Cerrejón",
+    date: "Ene 2026 - May 2026",
+    desc: "Lideré el desarrollo integral de la interfaz, lógica de negocio y arquitectura de datos para la automatización de checklists de incorporación de equipos mineros. Implementé un módulo de validación de evidencias técnicas en tiempo real e integré flujos de trabajo mediante Power Automate para la emisión de alertas críticas vía Microsoft Teams y correo corporativo, garantizando el 100% de cumplimiento normativo previo a la operación de la flota.",
+    tags: ["Next.js", "Tailwind CSS", "PostgreSQL", "Power Automate", "Docker"]
   },
   {
-    title: "Joonik",
-    desc: "Es una compañía global de tecnología y desarrollo de software especializada en la creación de productos digitales a medida y el suministro de talento técnico de alto nivel (staff augmentation). Con un enfoque ágil y orientado a resultados, la empresa conecta ingenieros calificados con organizaciones internacionales para acelerar su transformación digital. Destaca por construir equipos remotos eficientes y soluciones tecnológicas escalables para el mercado global.",
-    tech: ["Barranquilla", "Colombia"],
+    role: "Desarrollador Full Stack",
+    company: "Cerrejón",
+    date: "Ago 2025 - Dic 2025",
+    desc: "Diseñé y construí una plataforma web centralizada para el control absoluto de la cadena de reparación de componentes de maquinaria pesada, desde su recepción hasta la entrega técnica. El sistema coordina las solicitudes de múltiples áreas, rastrea técnicos asignados por turno, registra horas de labor junto al consumo de herramientas, y automatiza el traspaso de pendientes e insumos entre relevos operativos para asegurar la continuidad del taller.",
+    tags: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Power Automate", "Microsoft Teams", "SharePoint"]
+  },
+  {
+    role: "Analista Senior de Datos y Reporting",
+    company: "Cerrejón",
+    date: "Ene 2025 - Ago 2025",
+    desc: "Desarrollé un tablero analítico en Power BI para evaluar el desempeño e impacto financiero de la flota intervenida en procesos de Overhaul (vida media y extensión de vida). La solución consolida datos mediante SQL y macros en Excel para proyectar la disponibilidad y confiabilidad mensual de cada equipo hasta superar las 6,000 horas de operación, cruzando estos indicadores con el comportamiento de presupuestos CAPEX/OPEX, costos de mano de obra, repuestos y logística.",
+    tags: ["Análisis de datos", "Reporting ejecutivo", "Power BI", "SQL", "Excel", "VBA"]
+  },
+  {
+    role: "Desarrollador Full Stack",
+    company: "Cerrejón",
+    date: "Oct 2023 - May 2024",
+    desc: "Desarrollé un sistema de visualización en tiempo real que optimiza la toma de decisiones estratégicas para la gerencia y superintendencia durante el arme y desarme de maquinaria pesada. La plataforma centraliza la auditoría de pre-trabajo para tareas de alto riesgo (HSE) y despliega diagramas de Gantt interactivos que permiten a la alta línea de mando identificar cuellos de botella, evaluar retrasos y mitigar desviaciones operativas al instante.",
+    tags: ["Excel", "VBA", "React.js", "PostgreSQL", "Node.js"]
+  },
+  {
+    role: "Desarrollador Full Stack",
+    company: "Joonik",
+    date: "Ene 2021 - Ago 2023",
+    desc: "Co-desarrollo de Certainty App una aplicación web orientada a la optimización de finanzas personales y corporativas, actuando como un consultor financiero automatizado. El sistema centraliza la auditoría de egresos, proyecta estrategias para maximizar la rentabilidad y automatiza reportes contables junto a módulos de planes de ahorro estructurados. Adicionalmente, colaboré en el despliegue de su arquitectura en AWS mediante Docker y flujos de despliegue automatizado.",
+    tags: ["Laravel", "PHP", "MySQL", "AWS", "Docker", "Linux", "React.js", "CSS"]
+  },
+  {
+    role: "Desarrollador Full Stacks",
+    company: "Joonik",
+    date: "Ene 2021 - Dic 2021",
+    desc: "Formé parte del equipo de ingeniería a cargo de una plataforma web centralizada para la gestión operativa y comercial de concesionarios de automóviles de lujo en Estados Unidos. Participé activamente en la automatización del ciclo de comunicación con clientes y proveedores, el control estricto del inventario de repuestos por modelo, la auditoría en el procesamiento de garantías y la centralización de métricas analíticas de servicios técnicos.",
+    tags: ["Laravel", "PHP", "MySQL", "AWS", "Docker", "Linux", "React.js", "CSS"]
   }
 ];
 
@@ -21,41 +53,13 @@ const Projects = () => {
         <h2 className="text-[1.75rem] md:text-[2.3125rem] font-extrabold text-gray-900 dark:text-slate-100 leading-tight flex items-center gap-3
           before:content-[''] before:block before:w-[3px] before:h-[1.625rem] md:before:h-[2.125rem] before:bg-blue-500 dark:before:bg-blue-400 before:rotate-[15deg] before:rounded-sm before:shrink-0
         ">
-          Trayectoria Profesional
+          Proyectos Destacados
         </h2>
         <p className="mt-4 text-[0.9375rem] md:text-[1.0625rem] text-gray-500 dark:text-slate-400 max-w-2xl leading-[1.375rem]">
-          Organizaciones que han confiado en mi criterio técnico para optimizar sus procesos y sistemas.
+          Soluciones de software, análisis de datos y automatización diseñadas para resolver problemas reales de negocio.
         </p>
       </div>
-
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
-        {projects.map((proj, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: index * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-            viewport={{ once: true, margin: "-60px" }}
-            whileHover={{ y: -3 }}
-            className="bg-blue-50/50 border border-blue-100 rounded-xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] dark:bg-slate-800/60 dark:border-slate-700/80 dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_4px_16px_rgba(59,130,246,0.08)]"
-          >
-            <div className="w-full h-36 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-slate-700 dark:to-slate-600 rounded-lg mb-5 flex items-center justify-center">
-              <svg className="w-10 h-10 text-blue-400 dark:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100 mb-2">{proj.title}</h3>
-            <p className="text-sm text-gray-500 dark:text-slate-400 leading-[1.375rem] mb-4">{proj.desc}</p>
-            <div className="flex flex-wrap gap-2">
-              {proj.tech.map(tech => (
-                <span key={tech}                   className="px-2.5 py-1 bg-white border border-blue-100 rounded-full text-[0.6875rem] text-blue-600 font-medium dark:bg-slate-700 dark:border-slate-600 dark:text-blue-300">
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      <Timeline items={experiences} />
     </section>
   );
 };
