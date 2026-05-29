@@ -3,25 +3,15 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: "Dashboard de Ventas Retail",
-    desc: "Dashboard interactivo en Power BI con KPIs de ventas, márgenes y rotación de inventario, conectado a SQL Server.",
-    tech: ["Power BI", "SQL", "DAX"],
+    title: "Cerrejón",
+    desc: "Es una de las operaciones mineras de carbón a cielo abierto más grandes del mundo, ubicada en La Guajira, Colombia. Integra un complejo industrial que abarca la extracción en mina, una línea férrea de 150 km y Puerto Bolívar, una terminal marítima de alta eficiencia. La compañía exporta millones de toneladas anuales y es un pilar estratégico en la economía, infraestructura y desarrollo logístico del país.",
+    tech: ["Guajira", "Colombia"],
   },
   {
-    title: "Automatización de Reportes Financieros",
-    desc: "Pipeline en Python para consolidar estados financieros desde múltiples fuentes y generar reportes ejecutivos automáticos.",
-    tech: ["Python", "Pandas", "Excel"],
-  },
-  {
-    title: "Análisis de Deserción de Clientes",
-    desc: "Modelo de machine learning para predecir churn e identificar factores de riesgo, con visualizaciones interactivas.",
-    tech: ["Python", "Scikit-learn", "Power BI"],
-  },
-  {
-    title: "ETL de Indicadores Regionales",
-    desc: "Proceso ETL para integrar bases de datos de estudios socioeconómicos de América Latina, con validación y limpieza automatizada.",
-    tech: ["SQL", "Python", "Stata"],
-  },
+    title: "Joonik",
+    desc: "Es una compañía global de tecnología y desarrollo de software especializada en la creación de productos digitales a medida y el suministro de talento técnico de alto nivel (staff augmentation). Con un enfoque ágil y orientado a resultados, la empresa conecta ingenieros calificados con organizaciones internacionales para acelerar su transformación digital. Destaca por construir equipos remotos eficientes y soluciones tecnológicas escalables para el mercado global.",
+    tech: ["Barranquilla", "Colombia"],
+  }
 ];
 
 const Projects = () => {
@@ -31,10 +21,10 @@ const Projects = () => {
         <h2 className="text-[1.75rem] md:text-[2.3125rem] font-extrabold text-gray-900 dark:text-slate-100 leading-tight flex items-center gap-3
           before:content-[''] before:block before:w-[3px] before:h-[1.625rem] md:before:h-[2.125rem] before:bg-blue-500 dark:before:bg-blue-400 before:rotate-[15deg] before:rounded-sm before:shrink-0
         ">
-          Proyectos Destacados
+          Trayectoria Profesional
         </h2>
         <p className="mt-4 text-[0.9375rem] md:text-[1.0625rem] text-gray-500 dark:text-slate-400 max-w-2xl leading-[1.375rem]">
-          Una selección de proyectos donde apliqué análisis de datos, visualización y automatización para resolver problemas reales de negocio. 
+          Organizaciones que han confiado en mi criterio técnico para optimizar sus procesos y sistemas.
         </p>
       </div>
 
